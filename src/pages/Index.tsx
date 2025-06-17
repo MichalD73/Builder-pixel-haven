@@ -77,10 +77,10 @@ const Index = () => {
         }}
       >
         <div className="max-w-screen-xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            <div className="flex items-center space-x-4 lg:space-x-8">
               <div className="text-xl font-bold">
-                <div className="w-48 h-12 bg-orange-500 flex items-center justify-center text-white font-barlow">
+                <div className="w-40 lg:w-48 h-10 lg:h-12 bg-orange-500 flex items-center justify-center text-white font-barlow text-sm lg:text-base">
                   Vestavné spotřebiče
                 </div>
               </div>
@@ -93,13 +93,13 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center bg-white rounded shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+              <div className="flex items-center bg-white rounded shadow-sm w-full sm:w-auto">
                 <Input
                   placeholder="Hledat produkty..."
-                  className="w-80 lg:w-96 border-0 focus-visible:ring-0 bg-white"
+                  className="w-full sm:w-80 lg:w-96 border-0 focus-visible:ring-0 bg-white"
                 />
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 rounded-l-none border-l-4 border-black">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 lg:px-6 rounded-l-none border-l-4 border-black">
                   <span className="font-inter font-bold text-xs tracking-wide">
                     HLEDAT
                   </span>
@@ -110,7 +110,7 @@ const Index = () => {
                 <div className="text-xs font-inter font-bold text-black mr-2">
                   <span className="font-bold">Košík</span> 0 Ks
                 </div>
-                <ShoppingCart className="h-8 w-8 text-black" />
+                <ShoppingCart className="h-6 w-6 lg:h-8 lg:w-8 text-black" />
               </div>
             </div>
           </div>
