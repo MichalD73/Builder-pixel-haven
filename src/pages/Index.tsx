@@ -120,7 +120,7 @@ const Index = () => {
       {/* Main Navigation Menu */}
       <div className="bg-orange-500">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-8 divide-x divide-orange-400">
+          <div className="hidden lg:grid lg:grid-cols-8 divide-x divide-orange-400">
             {[
               "Vestavné spotřebiče",
               "Volně stojící",
@@ -133,11 +133,33 @@ const Index = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="h-16 flex items-center justify-center text-white text-xs font-inter text-center px-2"
+                className="h-16 flex items-center justify-center text-white text-xs font-inter text-center px-2 hover:bg-orange-600 transition-colors cursor-pointer"
               >
                 {item}
               </div>
             ))}
+          </div>
+          {/* Mobile Menu */}
+          <div className="lg:hidden overflow-x-auto">
+            <div className="flex space-x-0 divide-x divide-orange-400 min-w-max">
+              {[
+                "Vestavné spotřebiče",
+                "Volně stojící",
+                "Vaření a pečení",
+                "Myčky nádobí",
+                "Odsavače par",
+                "Praní a sušení",
+                "Dřezy a baterie",
+                "Akční nabídky",
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="h-16 flex items-center justify-center text-white text-xs font-inter text-center px-4 hover:bg-orange-600 transition-colors cursor-pointer whitespace-nowrap"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -379,7 +401,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="bg-white text-black p-4 rounded">
               <div className="space-y-4">
-                <Input placeholder="Jm��no" className="border-gray-300" />
+                <Input placeholder="Jméno" className="border-gray-300" />
                 <Input placeholder="Email" className="border-gray-300" />
                 <Input
                   placeholder="Telefonní číslo"
