@@ -19,10 +19,40 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Status Bar */}
-      <div className="bg-slate-800 text-white text-sm">
+      {/* Top Dark Bar */}
+      <div className="bg-gray-800 border-b border-gray-700">
+        <div className="max-w-screen-xl mx-auto px-4 h-8 flex items-center justify-between text-xs">
+          <div className="flex items-center space-x-4 text-gray-300">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-1">
+                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                <span className="text-orange-500 font-inter">
+                  ONLINE DO 23°°
+                </span>
+              </div>
+              <span className="font-inter">PŘIHLÁŠENÍ</span>
+              <span className="font-inter">6 X STUDIO V ČR</span>
+              <span className="font-inter">PRO FIRMY</span>
+              <span className="font-inter">KUCHYNĚ</span>
+              <span className="font-inter">O NÁKUPU</span>
+              <span className="font-inter">DOPRAVA ZDARMA</span>
+              <span className="text-orange-500 font-inter">KONTAKT</span>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <span className="font-inter text-gray-400 text-xs">
+              Vestavné spotřebiče | ElektroCZ.com
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Status Bar */}
+      <div className="bg-slate-700 text-white text-sm">
         <div className="max-w-screen-xl mx-auto px-4 h-8 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 text-sm">
             <span className="font-barlow font-light">ONLINE</span>
             <span className="text-cyan-400 font-barlow font-light">9-23°°</span>
             <span className="font-barlow font-light">6 x studio</span>
@@ -30,8 +60,8 @@ const Index = () => {
             <span className="font-barlow font-light">Nejlepší nabídky</span>
             <span className="font-barlow font-light">Kurzy vaření</span>
           </div>
-          <div className="bg-red-600 px-4 py-1 rounded-sm">
-            <span className="font-barlow font-light text-right">
+          <div className="bg-red-600 px-4 py-1 h-8 flex items-center">
+            <span className="font-barlow font-light text-sm">
               Aktuální kurz vaření : 17.6. Žitenická 871/7 Praha 9 Prosek
             </span>
           </div>
@@ -385,7 +415,7 @@ const Index = () => {
             },
             {
               title:
-                "Bosch Serie 8 HBG7541B1 – Dokonalé pečení s chytrou troubou",
+                "Bosch Serie 8 HBG7541B1 – Dokonalé pe��ení s chytrou troubou",
               duration: "1:51",
             },
             {
