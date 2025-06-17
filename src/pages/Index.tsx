@@ -169,11 +169,16 @@ const Index = () => {
         <Carousel className="w-full">
           <CarouselContent>
             <CarouselItem>
-              <img
-                src="/placeholder.svg"
-                alt="Hero Banner"
-                className="w-full h-80 object-cover"
-              />
+              <div className="relative w-full h-80 lg:h-96 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+                    Vestavné spotřebiče
+                  </h1>
+                  <p className="text-xl lg:text-2xl opacity-90">
+                    Profesionální poradenství • 6x studio v ČR
+                  </p>
+                </div>
+              </div>
             </CarouselItem>
           </CarouselContent>
         </Carousel>
@@ -374,7 +379,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="bg-white text-black p-4 rounded">
               <div className="space-y-4">
-                <Input placeholder="Jméno" className="border-gray-300" />
+                <Input placeholder="Jm��no" className="border-gray-300" />
                 <Input placeholder="Email" className="border-gray-300" />
                 <Input
                   placeholder="Telefonní číslo"
