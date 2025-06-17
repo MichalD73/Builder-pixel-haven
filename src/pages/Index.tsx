@@ -39,33 +39,48 @@ const Index = () => {
       </div>
 
       {/* Navigation Header */}
-      <div className="bg-gray-100 border-b">
-        <div className="max-w-screen-xl mx-auto px-4 py-2">
+      <div
+        className="bg-white border-b"
+        style={{
+          backgroundImage:
+            'url(\'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f3f4f6"/></svg>\')',
+        }}
+      >
+        <div className="max-w-screen-xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="text-xl font-bold">
-                <img src="/placeholder.svg" alt="ElektroCZ" className="h-8" />
+                <div className="w-48 h-12 bg-orange-500 flex items-center justify-center text-white font-barlow">
+                  Vestavné spotřebiče
+                </div>
+              </div>
+              <div className="hidden lg:block">
+                <img
+                  src="/placeholder.svg"
+                  alt="Akční nabídky"
+                  className="h-10 w-12"
+                />
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="flex items-center bg-white rounded">
+              <div className="flex items-center bg-white rounded shadow-sm">
                 <Input
                   placeholder="Hledat produkty..."
-                  className="w-96 border-0 focus-visible:ring-0"
+                  className="w-80 lg:w-96 border-0 focus-visible:ring-0 bg-white"
                 />
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 rounded-l-none border-l-2 border-black">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 rounded-l-none border-l-4 border-black">
                   <span className="font-inter font-bold text-xs tracking-wide">
                     HLEDAT
                   </span>
                 </Button>
               </div>
 
-              <div className="flex items-center text-right">
-                <div className="text-xs font-inter font-bold text-white">
+              <div className="flex items-center text-right bg-white p-2 rounded">
+                <div className="text-xs font-inter font-bold text-black mr-2">
                   <span className="font-bold">Košík</span> 0 Ks
                 </div>
-                <ShoppingCart className="ml-2 h-8 w-8 text-white" />
+                <ShoppingCart className="h-8 w-8 text-black" />
               </div>
             </div>
           </div>
