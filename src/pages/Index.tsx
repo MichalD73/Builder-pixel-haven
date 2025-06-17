@@ -279,7 +279,7 @@ const Index = () => {
 
           {/* Product Grid */}
           <div className="lg:col-span-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 {
                   name: "Miele TCA230WP Active",
@@ -318,31 +318,36 @@ const Index = () => {
                   image: "/placeholder.svg",
                 },
               ].map((product, index) => (
-                <Card
+                <div
                   key={index}
-                  className="group cursor-pointer hover:shadow-lg transition-shadow"
+                  className="bg-white group cursor-pointer hover:shadow-lg transition-shadow border border-gray-100 rounded"
                 >
-                  <CardContent className="p-4">
-                    <div className="aspect-square mb-4">
+                  <div className="p-3">
+                    <div className="aspect-square mb-3 flex items-center justify-center bg-gray-50">
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain max-h-24"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-2xl font-bold text-orange-500">
-                        {product.price} <span className="text-lg">Kč</span>
+                    <div className="space-y-1">
+                      <div className="flex items-baseline space-x-1">
+                        <span className="text-xl font-bold text-orange-500 font-inter">
+                          {product.price}
+                        </span>
+                        <span className="text-sm font-bold text-orange-500 font-inter">
+                          Kč
+                        </span>
                       </div>
-                      <h3 className="font-inter font-bold text-xs text-black line-clamp-2">
+                      <h3 className="font-inter font-bold text-xs text-black line-clamp-2 leading-tight">
                         {product.name}
                       </h3>
                       {product.category && (
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-500 font-inter">
                           {product.category}
                         </p>
                       )}
-                      <div className="flex">
+                      <div className="flex pt-1">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
@@ -351,8 +356,8 @@ const Index = () => {
                         ))}
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -415,7 +420,7 @@ const Index = () => {
             },
             {
               title:
-                "Bosch Serie 8 HBG7541B1 – Dokonalé pe��ení s chytrou troubou",
+                "Bosch Serie 8 HBG7541B1 – Dokonalé pečení s chytrou troubou",
               duration: "1:51",
             },
             {
